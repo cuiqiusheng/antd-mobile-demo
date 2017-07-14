@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * @param {Number} [baseFontSize = 100] - 基础fontSize, 默认100px;
  * @param {Number} [fontscale = 1] - 有的业务希望能放大一定比例的字体;
