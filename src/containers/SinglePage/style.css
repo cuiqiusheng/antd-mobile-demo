@@ -1,20 +1,14 @@
-#tab-bar.demo {
-  display: flex;
-  flex-direction: column;
-}
-#tab-bar .demoName {
-  height: 0.8rem;
-}
-#tab-bar .demo-preview-item,
-#tab-bar .demo-preview-item .am-tab-bar {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-#tab-bar .demo-preview-item .am-tab-bar {
-  background-color: white;
+.box {
+  text-align: center;
 }
 
-.box {
-  width: 100%;
+.notice {
+  width: 50%;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 50px;
+  font-size: 24px;
+  color: #999;
+  padding: 10px 100px 10px 30px;
+  text-align: left;
 }

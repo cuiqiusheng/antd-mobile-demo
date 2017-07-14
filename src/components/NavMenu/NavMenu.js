@@ -1,3 +1,6 @@
+/**
+ * @summary 下方导航
+ */
 import React, { Component } from 'react';
 import { TabBar, Icon } from 'antd-mobile';
 

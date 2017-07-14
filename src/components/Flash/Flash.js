@@ -1,5 +1,9 @@
+/**
+ * @summary 幻灯片
+ */
 import React, { Component } from 'react';
 import { Carousel } from 'antd-mobile';
+import style from './style.css';
 
 class Flash extends Component {
 
@@ -21,16 +25,6 @@ class Flash extends Component {
   }
 
   render() {
-    const style = {
-      block: {
-        width: '100%',
-        height: '280px',
-        background: '#be6f87',
-        color: '#fff',
-        fontSize: '200px',
-        lineHeight: '280px',
-      },
-    };
     return (
       <div>
         <Carousel
@@ -44,7 +38,7 @@ class Flash extends Component {
         >
           {this.state.data.map((item, index) => (
             <a key={index}>
-              <div style={style.block}>{index + 1}</div>
+              <div className={style.block}>{index + 1}</div>
             </a>
           ))}
         </Carousel>
