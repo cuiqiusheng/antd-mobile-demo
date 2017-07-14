@@ -165,7 +165,7 @@
               .setContentProperty('viewport', 'maximum-scale', ratio);
           } else if (os.ios && !os.android) {
             me.setContentProperty('viewport', 'user-scalable', 'no');
-            if (os.ios && parseInt(os.version) < 7) {
+            if (os.ios) {
               me.setContentProperty('viewport', 'initial-scale', ratio);
             }
           }
