@@ -1,0 +1,16 @@
+.title {
+  position: relative;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 25px;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  text-align: left;
+  font-size: 26px;
+}
+
+.icon {
+  position: absolute;
+  right: 20px;
+  top: 0;
+}

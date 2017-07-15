@@ -1,0 +1,17 @@
+.grid {
+  position: relative;
+  background: #f6f5fa;
+  color: #666;
+  padding: 15px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.t {
+  position: absolute;
+  left: 15px;
+  top: -10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #f6f5fa;
+}

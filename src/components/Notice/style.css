@@ -1,0 +1,41 @@
+.notice {
+  position: relative;
+  width: 80%;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 50px;
+  font-size: 24px;
+  color: #999;
+  padding: 10px 10px 10px 30px;
+  text-align: left;
+}
+
+.notice:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.content {
+  float: left;
+  width: 80%;
+  text-align: left;
+  color: #ccc;
+  font-size: 22px;
+}
+
+.right {
+  float: right;
+  width: calc(20% - 15px);
+  padding-right: 15px;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.icon {
+  background: #f00;
+  color: #fff;
+  padding: 2px 15px;
+  border-radius: 20px;
+  font-size: 20px;
+}
