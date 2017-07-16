@@ -9,6 +9,7 @@ import SinglePage from './containers/SinglePage';
 class BasicApp extends Component {
 
   render() {
+    console.log(document.documentElement.clientWidth);
     return (
       <div className="App">
         <SinglePage />

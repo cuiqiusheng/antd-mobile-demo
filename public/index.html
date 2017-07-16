@@ -3,7 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="target-densitydpi=device-dpi, width=640" name="viewport">
+  <!-- <meta content="target-densitydpi=device-dpi, width=640" name="viewport"> 
+   -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="theme-color" content="#000000">
   <!--
       manifest.json provides metadata used when your web app is added to the
@@ -21,9 +25,18 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
   <title>by Tim</title>
-  <script src="./fontSize.js"></script>
-  <script src="./metaHandler.js"></script>
-  <!--<script src="../src/utils/view-source.js"></script>-->
+  <script>
+    ;(function(win, doc){
+        function change(){
+            doc.documentElement.style.fontSize=100*doc.documentElement.clientWidth/640+'px';
+        }
+        change();
+        win.addEventListener('resize', change, false);
+    })(window, document);
+  </script>
+   <!-- <script src="./fontSize.js"></script> -->
+   <script src="./metaHandler.js"></script> 
+  <!-- <script src="../src/utils/view-source.js"></script>  -->
 </head>
 
 <body>

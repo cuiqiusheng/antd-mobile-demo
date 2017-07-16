@@ -44,6 +44,12 @@ const extractTextPluginOptions = shouldUseRelativeAssetPaths
     { publicPath: Array(cssFilename.split('/').length).join('../') }
   : {};
 
+//svg
+const svgSpriteDirs = [
+  require.resolve('antd-mobile').replace(/warn\.js$/, ''), // antd-mobile 内置svg
+  //path.resolve(__dirname, 'src/my-project-svg-foler'),  // 业务代码本地私有 svg 存放目录
+];
+
 // This is the production configuration.
 // It compiles slowly and is focused on producing a fast and minimal bundle.
 // The development configuration is different and lives in a separate file.
@@ -143,6 +149,8 @@ module.exports = {
           /\.gif$/,
           /\.jpe?g$/,
           /\.png$/,
+          /\.svg$/,
+          /\.less$/,
         ],
         loader: require.resolve('file-loader'),
         options: {
@@ -225,6 +233,46 @@ module.exports = {
       },
       // ** STOP ** Are you adding a new loader?
       // Remember to add the new extension(s) to the "file" loader exclusion list.
+
+      {
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader',
+        include: svgSpriteDirs,
+      },
+      //less
+      {
+        test: /\.less$/,
+        use: [{
+          loader: "style-loader"
+        }, {
+          loader: "css-loader"
+        }, {
+          loader: "less-loader"
+        }]
+      },
+      // babel js
+      {  
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query: {
+          plugins: [["import", {
+            libraryName: "antd-mobile",
+            style: true,
+          }]]
+        },
+      },
+      {
+        test: /\.svg/,
+        // use: [{
+        //   loader: 'svg-url-loader'
+        // }, {
+        //   loader: 'file-loader'
+        // }],
+        loader: 'file-loader',
+        exclude: svgSpriteDirs,
+      },
+
     ],
   },
   plugins: [
