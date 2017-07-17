@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import style from 'style.css';
+import style from './style.css';
 
 class Model extends Component {
   constructor(props) {
@@ -7,7 +7,7 @@ class Model extends Component {
     this.state ={};
   }
 
-  rrender() {
+  render() {
     return (
       <div className={style.wrapper}>Model</div>
     );

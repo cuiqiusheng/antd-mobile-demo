@@ -5,12 +5,14 @@ import {
 } from 'react-router';
 import App from './App';
 
-import SinglePage from './containers/SinglePage';
-import Guide from './containers/Guide';
+import Guide from './containers/Guide'; // 向导页(前期用来跳转展示页面，后期删除)
+import SinglePage from './containers/SinglePage';   // 首页
+import Ask from './containers/Ask';                 // 提问
 
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={Guide} />
     <Route path="home" component={SinglePage} />
+    <Route path="ask" component={Ask} />
   </Route>
 );
