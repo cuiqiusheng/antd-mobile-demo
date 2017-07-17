@@ -15,4 +15,4 @@
 * |   |——index.js
 * |   |——routes.js        路由
 * |——.gitignore           git忽略文件
-* |——package.json
+* |——package.json 
