@@ -13,7 +13,13 @@ class Medal extends Component {
 
   render() {
     return (
-      <span className={style.medal} style={{ borderColor: this.props.color, color: this.props.color }}>
+      <span
+        className={style.medal}
+        style={{
+          borderColor: this.props.color,
+          color: this.props.color,
+          fontSize: `${this.props.fontSize}px`,
+        }}>
         { this.props.children }
       </span>
     );
