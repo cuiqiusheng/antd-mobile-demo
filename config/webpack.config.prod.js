@@ -13,6 +13,12 @@ const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const paths = require('./paths');
 const getClientEnvironment = require('./env');
 
+const pxtorem = require('postcss-pxtorem');
+const svgDirs = [
+  require.resolve('antd-mobile').replace(/warn\.js$/, ''),  // 1. 属于 antd-mobile 内置 svg 文件
+  // path.resolve(__dirname, 'src/my-project-svg-foler'),  // 2. 自己私人的 svg 存放目录
+];
+
 // Webpack uses `publicPath` to determine where the app is being served from.
 // It requires a trailing slash, or the file assets will get an incorrect path.
 const publicPath = paths.servedPath;
@@ -43,12 +49,6 @@ const extractTextPluginOptions = shouldUseRelativeAssetPaths
   ? // Making sure that the publicPath goes back to to build folder.
     { publicPath: Array(cssFilename.split('/').length).join('../') }
   : {};
-
-//svg
-const svgSpriteDirs = [
-  require.resolve('antd-mobile').replace(/warn\.js$/, ''), // antd-mobile 内置svg
-  //path.resolve(__dirname, 'src/my-project-svg-foler'),  // 业务代码本地私有 svg 存放目录
-];
 
 // This is the production configuration.
 // It compiles slowly and is focused on producing a fast and minimal bundle.
@@ -92,7 +92,7 @@ module.exports = {
     // https://github.com/facebookincubator/create-react-app/issues/290
     // `web` extension prefixes have been added for better support
     // for React Native Web.
-    extensions: ['.web.js', '.js', '.json', '.web.jsx', '.jsx'],
+    extensions: ['.web.js', '.js', '.json', '.jsx'],
     alias: {
       
       // Support React Native Web
@@ -149,8 +149,8 @@ module.exports = {
           /\.gif$/,
           /\.jpe?g$/,
           /\.png$/,
-          /\.svg$/,
           /\.less$/,
+          /\.svg$/,
         ],
         loader: require.resolve('file-loader'),
         options: {
@@ -173,7 +173,9 @@ module.exports = {
         include: paths.appSrc,
         loader: require.resolve('babel-loader'),
         options: {
-          
+          plugins: [
+            ['import', { libraryName: 'antd-mobile', style: true }],
+          ],
           compact: true,
         },
       },
@@ -202,6 +204,8 @@ module.exports = {
                     importLoaders: 1,
                     minimize: true,
                     sourceMap: true,
+                    modules: true,
+                    localIdentName: '[name]__[local]___[hash:base64:5]',
                   },
                 },
                 {
@@ -221,6 +225,7 @@ module.exports = {
                         ],
                         flexbox: 'no-2009',
                       }),
+                      pxtorem({ rootValue: 100, propWhiteList: [] }),
                     ],
                   },
                 },
@@ -237,7 +242,7 @@ module.exports = {
       {
         test: /\.svg$/,
         loader: 'svg-sprite-loader',
-        include: svgSpriteDirs,
+        include: svgDirs,  // 把 svgDirs 路径下的所有 svg 文件交给 svg-sprite-loader 插件处理
       },
       //less
       {
@@ -250,27 +255,10 @@ module.exports = {
           loader: "less-loader"
         }]
       },
-      // babel js
-      {  
-        test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        query: {
-          plugins: [["import", {
-            libraryName: "antd-mobile",
-            style: true,
-          }]]
-        },
-      },
       {
         test: /\.svg/,
-        // use: [{
-        //   loader: 'svg-url-loader'
-        // }, {
-        //   loader: 'file-loader'
-        // }],
         loader: 'file-loader',
-        exclude: svgSpriteDirs,
+        exclude: svgDirs,
       },
 
     ],

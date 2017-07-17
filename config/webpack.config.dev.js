@@ -11,7 +11,12 @@ const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
+
 const pxtorem = require('postcss-pxtorem');
+const svgDirs = [
+  require.resolve('antd-mobile').replace(/warn\.js$/, ''),  // 1. 属于 antd-mobile 内置 svg 文件
+  // path.resolve(__dirname, 'src/my-project-svg-foler'),  // 2. 自己私人的 svg 存放目录
+];
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
@@ -22,12 +27,6 @@ const publicPath = '/';
 const publicUrl = '';
 // Get environment variables to inject into our app.
 const env = getClientEnvironment(publicUrl);
-
-//svg
-const svgSpriteDirs = [
-  require.resolve('antd-mobile').replace(/warn\.js$/, ''), // antd-mobile 内置svg
-  //path.resolve(__dirname, 'src/my-project-svg-foler'),  // 业务代码本地私有 svg 存放目录
-];
 
 // This is the development configuration.
 // It is focused on developer experience and fast rebuilds.
@@ -79,21 +78,6 @@ module.exports = {
       path.resolve(info.absoluteResourcePath).replace(/\\/g, '/'),
   },
   resolve: {
-
-    mainFiles: ["index.web","index"],// 这里哦
-    modules: ['app', 'node_modules', path.join(__dirname, '../node_modules')],
-    extensions: [
-      '.web.tsx', '.web.ts', '.web.jsx', '.web.js', '.ts', '.tsx',
-      '.js',
-      '.jsx',
-      '.react.js',
-    ],
-    mainFields: [
-      'browser',
-      'jsnext:main',
-      'main',
-    ],
-
     // This allows you to set a fallback for where Webpack should look for modules.
     // We placed these paths second because we want `node_modules` to "win"
     // if there are any conflicts. This matches Node resolution mechanism.
@@ -108,9 +92,9 @@ module.exports = {
     // https://github.com/facebookincubator/create-react-app/issues/290
     // `web` extension prefixes have been added for better support
     // for React Native Web.
-    extensions: ['.web.js', '.js', '.json', '.web.jsx', '.jsx'],
+    extensions: ['.web.js', '.js', '.json', '.jsx'],
     alias: {
-
+      
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
@@ -140,7 +124,7 @@ module.exports = {
           {
             options: {
               formatter: eslintFormatter,
-
+              
             },
             loader: require.resolve('eslint-loader'),
           },
@@ -166,8 +150,8 @@ module.exports = {
           /\.gif$/,
           /\.jpe?g$/,
           /\.png$/,
-          /\.svg$/,
           /\.less$/,
+          /\.svg$/,
         ],
         loader: require.resolve('file-loader'),
         options: {
@@ -191,6 +175,9 @@ module.exports = {
         include: paths.appSrc,
         loader: require.resolve('babel-loader'),
         options: {
+          plugins: [
+            ['import', { libraryName: 'antd-mobile', style: true }],
+          ],
           // This is a feature of `babel-loader` for webpack (not Babel itself).
           // It enables caching results in ./node_modules/.cache/babel-loader/
           // directory for faster rebuilds.
@@ -232,10 +219,7 @@ module.exports = {
                   ],
                   flexbox: 'no-2009',
                 }),
-                pxtorem({
-                  rootValue: 100,
-                  propWhiteList: [],
-                })
+                pxtorem({ rootValue: 100, propWhiteList: [] }),
               ],
             },
           },
@@ -247,7 +231,7 @@ module.exports = {
       {
         test: /\.svg$/,
         loader: 'svg-sprite-loader',
-        include: svgSpriteDirs,
+        include: svgDirs,  // 把 svgDirs 路径下的所有 svg 文件交给 svg-sprite-loader 插件处理
       },
       //less
       {
@@ -260,27 +244,10 @@ module.exports = {
           loader: "less-loader"
         }]
       },
-      // babel js
-      {  
-        test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        query: {
-          plugins: [["import", {
-            libraryName: "antd-mobile",
-            style: true,
-          }]]
-        },
-      },
       {
         test: /\.svg/,
-        // use: [{
-        //   loader: 'svg-url-loader'
-        // }, {
-        //   loader: 'file-loader'
-        // }],
         loader: 'file-loader',
-        exclude: svgSpriteDirs,
+        exclude: svgDirs,
       },
 
     ],

@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import { Router, hashHistory } from 'react-router';
+import routes from './routes';
+// import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+ReactDOM.render(
+  <Router history={hashHistory}>
+    { routes }
+  </Router>
+,document.getElementById('root'));
+// registerServiceWorker();

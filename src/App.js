@@ -1,27 +1,15 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-} from 'react-router-dom';
 import './App.css';
-import SinglePage from './containers/SinglePage';
 
-class BasicApp extends Component {
+class App extends Component {
 
   render() {
-    console.log(document.documentElement.clientWidth);
     return (
       <div className="App">
-        <SinglePage />
+        { this.props.children }
       </div>
     );
   }
 }
-
-const App = () => (
-  <Router>
-    <Route exact path="/" component={BasicApp} />
-  </Router>
-);
 
 export default App;
