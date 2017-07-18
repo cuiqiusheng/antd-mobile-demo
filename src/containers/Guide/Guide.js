@@ -17,6 +17,7 @@ class Guide extends Component {
         <Link to="ask">提问</Link><br />
         <Link to="chooseMaster">选择答主</Link><br />
         <Link to="releaseTopic">发布新话题</Link><br />
+        <Link to="hotTopic">热门话题</Link><br />
       </div>
     );
   }
