@@ -1,0 +1,28 @@
+.text {
+  height: 500px;
+  align-items: flex-start !important;
+}
+
+.content {
+  position: relative;
+  border-bottom: 1px solid #bbb;
+}
+
+.image {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 100%;
+}
+
+.tagBox {
+  height: 60px;
+  background: #fff;
+  padding: 10px;
+}
+
+.icon, .icon image {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}

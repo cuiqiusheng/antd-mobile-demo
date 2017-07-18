@@ -69,6 +69,7 @@ class Ask extends Component {
           />
           <div className={style.image}>
             <ImagePicker
+              files={files}
               onChange={this.onChange}
               onImageClick={(index, fs) => console.log(index, fs)}
               selectable={files.length < 5}
