@@ -53,10 +53,6 @@ class ChooseMaster extends Component {
                   <Masteritem></Masteritem>
                   <Masteritem></Masteritem>
                   <Masteritem></Masteritem>
-                  <Masteritem></Masteritem>
-                  <Masteritem></Masteritem>
-                  <Masteritem></Masteritem>
-
               </div>
           </TabPane>
         </Tabs>
