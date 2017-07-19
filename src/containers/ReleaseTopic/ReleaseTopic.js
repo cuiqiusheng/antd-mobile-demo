@@ -3,6 +3,7 @@ import style from './style.css';
 import { NavBar, ImagePicker, TextareaItem, WhiteSpace, List, Switch } from 'antd-mobile';
 import { createForm } from 'rc-form';
 import Medal from '../../components/Medal';
+import tag from '../../containers/Ask/image/tag.png';
 
 class ReleaseTopic extends Component {
   constructor(props) {
@@ -71,7 +72,7 @@ class ReleaseTopic extends Component {
 
         <div className={style.tagBox}>
           <span className={style.icon}>
-            <image />
+            <image src={tag} />
           </span>
           <Medal fontSize="28">保险</Medal>
           <Medal fontSize="28" color="#d563f7">基金</Medal>

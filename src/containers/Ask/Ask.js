@@ -78,7 +78,7 @@ class Ask extends Component {
         </div>
 
         <div className={style.tagBox}>
-          <span className={style.icon}><image src={tag} /></span>
+          <span className={style.icon}><img src={tag} alt="" /></span>
           <Medal fontSize="28">保险</Medal>
           <Medal fontSize="28" color="#d563f7">基金</Medal>
           <Medal fontSize="28" color="#f66390">债券</Medal>

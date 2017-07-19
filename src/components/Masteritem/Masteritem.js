@@ -7,7 +7,7 @@ import style from './style.css';
 import { Checkbox } from 'antd-mobile';
 import Medal from '../../components/Medal'
 
-// import testphotojpg from './testphotojpg.jpg';
+import testphotojpg from './testphotojpg.jpg';
 
 class Masteritem extends Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class Masteritem extends Component {
       <div className={style.masteritembox}>
         <div className={style.headportrait}>
           <div className={style.imgbox}>
-            {/*<img src={testphotojpg} alt="" className={style.portrait}/>*/}
+            <img src={testphotojpg} alt="" className={style.portrait}/>
             <div className={style.portrait}></div>
           </div>
         </div>
