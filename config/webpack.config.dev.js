@@ -183,7 +183,7 @@ module.exports = {
         loader: require.resolve('babel-loader'),
         options: {
           plugins: [
-            ['import', { libraryName: 'antd-mobile', style: true }],
+            ['import', { libraryName: 'antd-mobile', style: 'css' }],
           ],
           // This is a feature of `babel-loader` for webpack (not Babel itself).
           // It enables caching results in ./node_modules/.cache/babel-loader/
@@ -198,6 +198,7 @@ module.exports = {
       // in development "style" loader enables hot editing of CSS.
       {
         test: /\.css$/,
+        exclude: require.resolve('antd-mobile').replace(/warn\.js$/, ''),
         use: [
           {
             loader: require.resolve('style-loader'),
@@ -234,38 +235,49 @@ module.exports = {
         ],
       },
 
+      {
+        test: /\.css$/,
+        include: require.resolve('antd-mobile').replace(/warn\.js$/, ''),
+        use: [
+          {
+            loader: require.resolve('style-loader'),
+          },
+          {
+            loader: require.resolve('css-loader'),
+            options: {
+              importLoaders: 1,
+            },
+          },
+          {
+            loader: require.resolve('postcss-loader'),
+            options: {
+              // Necessary for external CSS imports to work
+              // https://github.com/facebookincubator/create-react-app/issues/2677
+              ident: 'postcss',
+              plugins: () => [
+                require('postcss-flexbugs-fixes'),
+                autoprefixer({
+                  browsers: [
+                    '>1%',
+                    'last 4 versions',
+                    'Firefox ESR',
+                    'not ie < 9', // React doesn't support IE8 anyway
+                  ],
+                  flexbox: 'no-2009',
+                }),
+                pxtorem({ rootValue: 100, propWhiteList: [] })
+              ],
+            },
+          },
+        ],
+      },
+
       // ** STOP ** Are you adding a new loader?
       // Remember to add the new extension(s) to the "file" loader exclusion list.
       {
         test: /\.svg$/,
         loader: 'svg-sprite-loader',
         include: svgDirs,  // 把 svgDirs 路径下的所有 svg 文件交给 svg-sprite-loader 插件处理
-      },
-      //less
-      {
-        test: /\.less$/,
-        use: [
-          require.resolve('style-loader'),
-          require.resolve('css-loader'),
-          {
-            loader: require.resolve('postcss-loader'),
-            options: {
-              ident: 'postcss', // https://webpack.js.org/guides/migrating/#complex-options
-              plugins: () => [
-                autoprefixer({
-                    browsers: ['last 2 versions', 'Firefox ESR', '> 1%', 'ie >= 8', 'iOS >= 8', 'Android >= 4'],
-                }),
-                pxtorem({ rootValue: 100, propWhiteList: [] })
-              ],
-          },
-      },
-      {
-        loader: require.resolve('less-loader'),
-          options: {
-              modifyVars: { "@primary-color": "#1DA57A" },
-            },
-          },
-        ],
       },
       {
         test: /\.svg/,
