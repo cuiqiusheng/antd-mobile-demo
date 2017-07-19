@@ -170,11 +170,11 @@ module.exports = {
               limit: 10000,
               // name: 'static/media/[name].[hash:8].[ext]',
             },
-          }, {
-            loader: require.resolve('img-loader')
-          }
+          }, 
+          // {
+          //   loader: require.resolve('img-loader')
+          // }
         ],
-        // loader: require.resolve('url-loader'),
       },
       // Process JS with Babel.
       {
@@ -198,9 +198,10 @@ module.exports = {
       // in development "style" loader enables hot editing of CSS.
       {
         test: /\.css$/,
-        exclude: paths.antdmModules,
         use: [
-          require.resolve('style-loader'),
+          {
+            loader: require.resolve('style-loader'),
+          },
           {
             loader: require.resolve('css-loader'),
             options: {
@@ -232,9 +233,9 @@ module.exports = {
           },
         ],
       },
+
       // ** STOP ** Are you adding a new loader?
       // Remember to add the new extension(s) to the "file" loader exclusion list.
-
       {
         test: /\.svg$/,
         loader: 'svg-sprite-loader',
