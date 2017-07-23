@@ -1,3 +1,6 @@
+/**
+ * @summary 热门话题页面
+ */
 import React, { Component } from 'react';
 import style from './style.css';
 import {
@@ -5,7 +8,11 @@ import {
   // WhiteSpace,
   Tabs
 } from 'antd-mobile';
-// import Medal from '../../components/Medal';
+import Medal from '../../components/Medal';
+import HotTopicItem from '../../components/HotTopicItem';
+import img1 from './img1.jpg';
+import img2 from './img2.jpg';
+import img3 from './img3.jpg';
 
 const TabPane = Tabs.TabPane;
 
@@ -40,22 +47,79 @@ class HotTopic extends Component {
 
         <Tabs defaultActiveKey="1" animated={false} onChange={callback} onTabClick={handleTabClick}>
           <TabPane tab="推荐" key="1">
-            <div>内容1</div>
+            <HotTopicItem
+              content="# 中航信托 天启（2017）82号硅谷产业基金集合信托 # 信中利达股东汪潮涌承诺回购的股权投资项目靠谱么？"
+              medal={<div><Medal>基金</Medal><Medal>保险</Medal></div>}
+              cy="45"
+            >
+              <img src={img1} alt="img1"/>
+              <img src={img2} alt="img2"/>
+              <img src={img3} alt="img3"/>
+            </HotTopicItem>
+            <HotTopicItem
+              content="# 中航信托 天启（2017）82号硅谷产业基金集合信托 # 信中利达股东汪潮涌承诺回购的股权投资项目靠谱么？"
+              medal={<Medal>基金</Medal>}
+              cy="234"
+            >
+            </HotTopicItem>
+            <HotTopicItem
+              content="# 中航信托 天启（2017）82号硅谷产业基金集合信托 # 信中利达股东汪潮涌承诺回购的股权投资项目靠谱么？"
+              medal={<Medal>基金</Medal>}
+              cy="234"
+            >
+            </HotTopicItem>
+            <HotTopicItem
+              content="# 中航信托 天启（2017）82号硅谷产业基金集合信托 # 信中利达股东汪潮涌承诺回购的股权投资项目靠谱么？"
+              medal={<Medal>基金</Medal>}
+              cy="234"
+            >
+            </HotTopicItem>
           </TabPane>
           <TabPane tab="保险" key="2">
-            <div>内容2</div>
+            <HotTopicItem
+              content="# 中航信托 天启（2017）82号硅谷产业基金集合信托 # 信中利达股东汪潮涌承诺回购的股权投资项目靠谱么？"
+              medal={<Medal>基金</Medal>}
+              cy="23"
+            >
+            </HotTopicItem>
           </TabPane>
           <TabPane tab="债券" key="3">
-            <div>内容3</div>
+            <HotTopicItem
+              content="# 中航信托 天启（2017）82号硅谷产业基金集合信托 # 信中利达股东汪潮涌承诺回购的股权投资项目靠谱么？"
+              medal={<Medal>基金</Medal>}
+              cy="654"
+            >
+              <img src={img1} alt="img1"/>
+              <img src={img2} alt="img2"/>
+              <img src={img3} alt="img3"/>
+            </HotTopicItem>
           </TabPane>
           <TabPane tab="基金" key="4">
-            <div>内容4</div>
+            <HotTopicItem
+              content="# 中航信托 天启（2017）82号硅谷产业基金集合信托 # 信中利达股东汪潮涌承诺回购的股权投资项目靠谱么？"
+              medal={<Medal>基金</Medal>}
+              cy="234"
+            >
+            </HotTopicItem>
           </TabPane>
           <TabPane tab="海外房产" key="5">
-            <div>内容5</div>
+            <HotTopicItem
+              content="# 中航信托 天启（2017）82号硅谷产业基金集合信托 # 信中利达股东汪潮涌承诺回购的股权投资项目靠谱么？"
+              medal={<Medal>基金</Medal>}
+              cy="54"
+            >
+              <img src={img1} alt="img1"/>
+              <img src={img2} alt="img2"/>
+              <img src={img3} alt="img3"/>
+            </HotTopicItem>
           </TabPane>
           <TabPane tab="护照" key="6">
-            <div>内容6</div>
+            <HotTopicItem
+              content="# 中航信托 天启（2017）82号硅谷产业基金集合信托 # 信中利达股东汪潮涌承诺回购的股权投资项目靠谱么？"
+              medal={<Medal>基金</Medal>}
+              cy="234"
+            >
+            </HotTopicItem>
           </TabPane>
         </Tabs>
       </div>

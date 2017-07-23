@@ -13,7 +13,8 @@ class Model extends Component {
 
   render() {
     return (
-      <div className={style.model}>
+      <div className={style.wrapper}>
+        Model
       </div>
     );
   }

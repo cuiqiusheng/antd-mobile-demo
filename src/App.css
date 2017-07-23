@@ -1,3 +1,7 @@
+body p {
+  margin: 0;
+}
+
 /* textarea组件字号修改 */
 :global(.am-textarea-control textarea) {
   font-size: 28px !important;
@@ -14,4 +18,9 @@
 
 :global(.am-list-item .am-list-line .am-list-extra) {
   font-size: 30px !important;
+}
+
+:global(.am-card-body) {
+  font-size: 28px !important;
+  line-height: 36px;
 }

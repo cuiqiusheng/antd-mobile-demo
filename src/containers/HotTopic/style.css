@@ -1,3 +1,8 @@
 .navbar {
   border-bottom: 1px solid #bbb;
 }
+
+.wrapper img {
+  width: calc(33% - 3px);
+  margin-right: 3px;
+}

@@ -1,0 +1,60 @@
+.wrapper {
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 15px;
+}
+
+.wrapper:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.wrapper > div {
+  float: left;
+}
+
+.avatar {
+  width: 20%;
+}
+
+.avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.info {
+  width: 55%;
+}
+
+.info p {
+  margin: 8px 0;
+}
+
+.info > p:nth-child(1) {
+  font-size: 26px;
+}
+
+.info > p:nth-child(2) {
+  font-size: 22px;
+  color: #999;
+}
+
+.info > p:nth-child(3) {
+  font-size: 22px;
+  color: #999;
+}
+
+.info p span {
+  margin: 0 10px;
+}
+
+.btn {
+  margin: 30px 30px;
+  font-size: 22px;
+  border: 1px solid #118eea;
+  color: #118eea;
+  padding: 2px 15px;
+  border-radius: 20px;
+}
