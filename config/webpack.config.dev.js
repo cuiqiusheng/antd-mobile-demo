@@ -152,6 +152,7 @@ module.exports = {
           /\.png$/,
           /\.less$/,
           /\.svg$/,
+          /\.json$/,
         ],
         loader: require.resolve('file-loader'),
         options: {
@@ -283,6 +284,10 @@ module.exports = {
         test: /\.svg/,
         loader: 'file-loader',
         exclude: svgDirs,
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader',
       },
 
     ],

@@ -5,12 +5,33 @@ import { createForm } from 'rc-form';
 import tag from './image/tag.png';
 import Medal from '../../components/Medal';
 
+import * as actions from './actions';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+function mapStateToProps(state) {
+  console.log(state);
+  return {
+    ask: state.ask,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(actions, dispatch),
+  };
+}
+
 class Ask extends Component {
   constructor(props) {
     super(props);
     this.state ={
       files: [],
     };
+  }
+
+  componentDidMount() {
+    this.props.actions.getData();
   }
 
   onChange = (files, type, index) => {
@@ -40,7 +61,7 @@ class Ask extends Component {
 	];
 
   render() {
-		console.log(this.data)
+    console.log(this.props);
     const { getFieldProps } = this.props.form;
     const { files } = this.state;
     return (
@@ -152,4 +173,8 @@ class Ask extends Component {
 }
 
 Ask = createForm()(Ask);
-export default Ask;
+// export default Ask;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Ask);

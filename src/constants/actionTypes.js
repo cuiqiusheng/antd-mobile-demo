@@ -1,0 +1,1 @@
+export const PAYMENT_AND_RELEASE = 'payment_and_release';
