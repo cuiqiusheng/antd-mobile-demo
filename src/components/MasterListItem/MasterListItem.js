@@ -9,7 +9,14 @@ class MasterListItem extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      focus: false,
+    };
+    this.handleFocus = this.handleFocus.bind(this);
+  }
+
+  handleFocus() {
+    this.setState({focus: !this.state.focus});
   }
 
   render() {
@@ -21,7 +28,10 @@ class MasterListItem extends Component {
           <p>{this.props.dsc}</p>
           <p>230 问答<span>·</span>1677 关注<span>·</span>76 赞</p>
         </div>
-        <div className={style.btn}>关注</div>
+        <div
+          onClick={this.handleFocus}
+          className={this.state.focus ? style.btnGray : style.btn}
+        ><span></span>{this.state.focus ? '已关注' : '关注'}</div>
       </div>
     );
   }
