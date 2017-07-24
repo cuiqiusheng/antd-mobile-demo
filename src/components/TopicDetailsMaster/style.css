@@ -1,0 +1,81 @@
+.wrapper {
+    border-bottom: 1px solid #ccc;
+    background: #f6f5fa;
+    padding: 15px;
+}
+
+.wrapper:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.wrapper > div {
+    float: left;
+}
+
+.avatar {
+    width: 20%;
+}
+
+.avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.info {
+    width: 55%;
+}
+
+.info p {
+    margin: 15px 0;
+}
+
+.info > p:nth-child(1) {
+    font-size: 24px;
+}
+
+.info > p:nth-child(2) {
+    font-size: 22px;
+    color: #999;
+}
+
+.info > p:nth-child(3) {
+    font-size: 22px;
+    color: #999;
+}
+
+.info p span {
+    margin: 0 10px;
+}
+
+.btnGray {
+    margin: 30px 0 30px 30px;
+    font-size: 22px;
+    border: 1px solid #dadada;
+    background: #dadada;
+    color: #898989;
+    padding: 1px 15px 2px 15px;
+    border-radius: 20px;
+}
+
+.btn {
+    position: relative;
+    margin: 30px 0 30px 30px;
+    font-size: 22px;
+    border: 1px solid #118eea;
+    color: #118eea;
+    padding: 1px 15px 2px 35px;
+    border-radius: 20px;
+}
+
+.btn span {
+    position: absolute;
+    left: 10px;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    background: url('./focus.png') no-repeat;
+    background-size: contain;
+}
