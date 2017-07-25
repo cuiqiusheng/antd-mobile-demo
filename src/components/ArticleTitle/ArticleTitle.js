@@ -16,7 +16,7 @@ class model extends Component {
     render() {
         return (
             <div className={style.box}>
-              <i className={style.type}><Medal fontSize="23" color="#007ae4">基金</Medal></i>
+              <i className={style.type}><Medal fontSize="24" color="#007ae4">基金</Medal></i>
               <h3 className={style.title}>{ this.props.children }</h3>
             </div>
         );

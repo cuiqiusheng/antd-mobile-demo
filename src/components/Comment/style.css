@@ -1,0 +1,100 @@
+.box{
+    background: #fff;
+}
+.wrapper {
+    padding: 15px;
+    height: 60px;
+    border-top:1px solid #dfdee2;
+}
+
+.wrapper:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.wrapper > div {
+    float: left;
+}
+
+.avatar {
+    width: 85px;
+}
+
+.avatar img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.info {
+    width: 400px;
+}
+.job{
+    font-size: 21px;
+    color:#7c7c7c;
+}
+.info > p:nth-child(1) {
+    font-size: 24px;
+    padding-bottom:5px;
+}
+
+.info > p:nth-child(2) {
+    font-size: 22px;
+    color: #999;
+}
+
+.info > p:nth-child(3) {
+    font-size: 22px;
+    color: #999;
+}
+
+.info p span {
+    margin-right:20px;
+}
+
+.btnGray {
+    position: relative;
+    font-size: 22px;
+    color:#aaaaaa;
+    padding:15px;
+}
+
+.btn {
+    position: relative;
+    font-size: 22px;
+    color:#aaaaaa;
+    padding:15px;
+}
+
+.btn span {
+    position: absolute;
+    left: 50px;
+    top: 10px;
+    width: 32px;
+    height: 32px;
+    background: url('./6.png') no-repeat;
+    background-size: contain;
+}
+.btnGray span {
+    position: absolute;
+    left: 50px;
+    top: 10px;
+    width: 32px;
+    height: 32px;
+    background: url('./7.png') no-repeat;
+    background-size: contain;
+}
+.commenttext{
+    font-size:24px;
+    line-height: 37px;
+    color:#000;
+    font-family: "Microsoft YaHei";
+    font-weight: normal;
+    letter-spacing:1px;
+    padding:0 20px 20px 100px;
+}
+.paragraph{
+    text-indent:45px;
+}

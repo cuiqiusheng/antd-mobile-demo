@@ -1,5 +1,4 @@
 .wrapper {
-    border-bottom: 1px solid #ccc;
     background: #f6f5fa;
     padding: 15px;
 }
@@ -33,7 +32,7 @@
 }
 
 .info > p:nth-child(1) {
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .info > p:nth-child(2) {

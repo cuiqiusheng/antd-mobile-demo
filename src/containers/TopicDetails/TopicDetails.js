@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import style from './style.css';
-import { NavBar, Icon } from 'antd-mobile';
+import { NavBar, Icon , WhiteSpace} from 'antd-mobile';
 import ArticleTitle from '../../components/ArticleTitle';
 import TopicDetailsMaster from '../../components/TopicDetailsMaster';
+import Articlecontent from '../../components/Articlecontent';
+import Comment from '../../components/Comment';
 
 class Model extends Component {
   constructor(props) {
@@ -22,6 +24,13 @@ class Model extends Component {
         >热门话题</NavBar>
           <ArticleTitle>“广撒网”败给抱团 量化基金困局待破</ArticleTitle>
           <TopicDetailsMaster name="吴亦凡"></TopicDetailsMaster>
+          <Articlecontent></Articlecontent>
+          <WhiteSpace/>
+          <Comment></Comment>
+          <WhiteSpace/>
+          <Comment></Comment>
+          <WhiteSpace/>
+          <Comment></Comment>
       </div>
     );
   }
