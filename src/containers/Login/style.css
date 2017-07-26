@@ -1,0 +1,25 @@
+
+.content{
+    background-color: white;
+    /*height:100%;*/
+    /*width:100%;*/
+    /*position:fixed;*/
+    /*height: 10rem;*/
+    overflow: auto;
+}
+
+.areaSelect{
+    margin:0.22rem 0.44rem 0.44rem 0.44rem;
+    font-size: 0.28rem;
+    color: #1f90e7;
+}
+
+.bottom{
+    font-size: 0.28rem;
+    color: #1f90e7;
+    text-align: center;
+    width: 100%;
+    height: 0.44rem;
+    position: fixed;
+    bottom: 0.86rem;
+}
