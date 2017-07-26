@@ -5,7 +5,7 @@ import ArticleTitle from '../../components/ArticleTitle';
 import TopicDetailsMaster from '../../components/TopicDetailsMaster';
 import Articlecontent from '../../components/Articlecontent';
 import Comment from '../../components/Comment';
-
+import CommentColumn from '../../components/CommentColumn';
 class Model extends Component {
   constructor(props) {
     super(props);
@@ -31,6 +31,7 @@ class Model extends Component {
           <Comment></Comment>
           <WhiteSpace/>
           <Comment></Comment>
+        <CommentColumn></CommentColumn>
       </div>
     );
   }

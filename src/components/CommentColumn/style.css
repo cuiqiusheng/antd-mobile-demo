@@ -1,0 +1,42 @@
+.wrapper{
+    height: 86px;
+    width: 100%;
+    position:fixed;
+    bottom:0;
+    background:#ffffff;
+    border-top:1px solid #bcbcbc;
+    z-index: 100;
+}
+.buttonmod{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 100%;
+}
+.commentbtn{
+    height: 40px;
+    font-size: 24px;
+    line-height: 40px;
+    padding-left:60px;
+    color:#1296db;
+    position:relative;
+    flex: 4;
+}
+.penlic{
+    width: 35px;
+    position:absolute;
+    top:2px;
+    left:20px;
+}
+.goodnum,.likenum,.commentnum{
+    height: 40px;
+    font-size: 24px;
+    line-height: 40px;
+    padding-left:60px;
+    color:#000000;
+    position:relative;
+    flex: 1;
+}
