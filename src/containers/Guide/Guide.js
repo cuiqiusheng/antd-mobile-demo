@@ -24,5 +24,5 @@ class Guide extends Component {
     );
   }
 }
-console.log(document.documentElement.clientWidth);
+// console.log(document.documentElement.clientWidth);
 export default Guide;
