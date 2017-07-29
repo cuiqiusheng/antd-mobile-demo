@@ -14,8 +14,9 @@ import HotTopic from './containers/HotTopic';           // 热门话题
 import TopicDetails from './containers/TopicDetails';   // 话题详情
 import MasterList from './containers/MasterList';       // 答主列表
 import RewardQuestion from './containers/RewardQuestion';  // 悬赏问题
-import MasterIndex from './containers/MasterIndex';  // 悬赏问题
+import MasterIndex from './containers/MasterIndex';     // 悬赏问题
 
+import PersonalInfo from './containers/PersonalInfo'    // 个人信息
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={Guide} />
@@ -28,5 +29,6 @@ export default (
     <Route path="masterList" component={MasterList} />
     <Route path="rewardQuestion" component={RewardQuestion} />
     <Route path="masterIndex" component={MasterIndex} />
+    <Route path="PersonalInfo" component={PersonalInfo} />
   </Route>
 );
