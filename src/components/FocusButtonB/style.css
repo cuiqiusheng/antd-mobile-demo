@@ -1,0 +1,16 @@
+.focusBtn {
+  position: relative;
+  font-size: 22px;
+  color: #fff;
+  background: #0f8fea;
+  border: 1px solid #118ee8;
+  white-space: nowrap;
+}
+
+.focusAlready {
+  position: relative;
+  font-size: 22px;
+  background: #dadada;
+  color: #898989;
+  white-space: nowrap;
+}

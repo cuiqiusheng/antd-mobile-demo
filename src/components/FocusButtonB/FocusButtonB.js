@@ -1,12 +1,12 @@
 /**
- * @summary 关注按钮(有图标)
- * @date    2017-07-29
+ * @summary 关注按钮(无图标)
+ * @date    2017-07-30
  * @author  cuiqs
  */
 import React, { Component } from 'react';
 import style from './style.css';
 
-class FocusButton extends Component {
+class FocusButtonB extends Component {
 
   constructor(props) {
     super(props);
@@ -23,11 +23,10 @@ class FocusButton extends Component {
   render() {
     return (
       <button className={this.state.focus ? style.focusAlready : style.focusBtn} onClick={this.onFocus}>
-        <span className={this.state.focus ? '' : style.focus}></span>
         {this.state.focus ? '已关注' : '关注'}
       </button>
     );
   }
 }
 
-export default FocusButton;
+export default FocusButtonB;

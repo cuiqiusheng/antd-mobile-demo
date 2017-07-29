@@ -1,0 +1,127 @@
+.wrapper {
+  position: relative;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.banner p {
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
+  color: #fff;
+}
+
+.btnBox {
+  text-align: right;
+}
+
+.info {
+  height: 60px;
+  padding: 20px;
+  background: #f6f5fa;
+  font-size: 20px;
+}
+
+.info:after, .liveAddr:after, .bottom:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.info > div{
+  float: left;
+}
+
+.info > div:nth-child(1) {
+  width: 80%;
+}
+
+.info > div:nth-child(2) {
+  width: 20%;
+}
+
+.info img {
+  margin-right: 10px;
+}
+
+.local {
+  margin-right: 30px;
+}
+
+.infoBottom {
+  margin-top: 12px;
+}
+
+.infoBottom span {
+  color: #ccc;
+  margin: 0 15px;
+}
+
+.contentBox {
+  height: 700px;
+  background: #fff;
+  padding: 15px;
+  font-size: 24px;
+}
+
+.liveAddr {
+  margin-bottom: 15px;
+}
+
+.liveAddr > div {
+  float: left;
+}
+
+.liveAddr > div:nth-child(1) {
+  width: 120px;
+}
+
+.liveAddr > div:nth-child(2) {
+  width: calc(100% - 120px);
+}
+
+.addr {
+  float: left;
+  width: calc(100% - 120px);
+  color: #6baff0;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+.liveDsc {
+  margin-top: 30px;
+  color: #999;
+  line-height: 34px;
+}
+
+.bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 24px;
+}
+
+.bottom > div {
+  float: left;
+  width: 50%;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+}
+
+.online {
+  color: #118eea;
+  border-top: 1px solid #ccc;
+}
+
+.offline {
+  background: #118eea;
+  color: #fff;
+}

@@ -1,3 +1,8 @@
+/**
+ * @summary 答主主页
+ * @date    2017-07-30
+ * @author  cuiqs
+ */
 import React, { Component } from 'react';
 import style from './style.css';
 import { NavBar, WhiteSpace, Button } from 'antd-mobile';

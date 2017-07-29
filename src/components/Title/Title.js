@@ -1,5 +1,5 @@
 /**
- * @summary 标题
+ * @summary 标题(右边带箭头)
  */
 import React, { Component } from 'react';
 import style from './style.css';
