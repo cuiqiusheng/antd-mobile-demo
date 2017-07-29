@@ -16,12 +16,12 @@ class MasterList extends Component {
     return (
       <div className={style.wrapper}>
         <NavBar
-            leftContent="返回"
-            rightContent={null}
-            mode="light"
-            onLeftClick={() => console.log('取消')}
-            className={style.navbar}
-          >答主</NavBar>
+          leftContent="返回"
+          rightContent={null}
+          mode="light"
+          onLeftClick={() => console.log('取消')}
+          className={style.navbar}
+        >答主</NavBar>
         <MasterListItem
           name="张震岳"
           dsc="持牌人，对友邦保险有深入了解"

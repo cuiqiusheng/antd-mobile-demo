@@ -12,7 +12,8 @@ import ChooseMaster from './containers/ChooseMaster';   // 选择答主
 import ReleaseTopic from './containers/ReleaseTopic';   // 发布新话题
 import HotTopic from './containers/HotTopic';           // 热门话题
 import TopicDetails from './containers/TopicDetails';   // 话题详情
-import MasterList from './containers/MasterList';   // 答主列表
+import MasterList from './containers/MasterList';       // 答主列表
+import RewardQuestion from './containers/RewardQuestion';  // 悬赏问题
 
 export default (
   <Route path="/" component={App}>
@@ -24,5 +25,6 @@ export default (
     <Route path="hotTopic" component={HotTopic} />
     <Route path="topicDetails" component={TopicDetails} />
     <Route path="masterList" component={MasterList} />
+    <Route path="rewardQuestion" component={RewardQuestion} />
   </Route>
 );

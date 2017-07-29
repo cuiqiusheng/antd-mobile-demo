@@ -1,0 +1,74 @@
+.wrapper {
+  background: #fff;
+  border-top: 1px solid #e0dfe4;
+  border-bottom: 1px solid #e0dfe4;
+  padding: 30px 10px 25px;
+}
+
+.top:after, .bottom:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.top > div, .bottom > div {
+  float: left;
+}
+
+.price {
+  width: 20%;
+  color: #ec2134;
+  font-size: 40px;
+  padding-top: 15px;
+}
+
+.price span {
+  font-size: 24px;
+}
+
+.content {
+  width: 80%;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.bottom {
+  margin-top: 15px;
+}
+
+div.btnBox {
+  float: right;
+  text-align: right;
+}
+
+.btnBox button {
+  font-size: 22px;
+  margin-left: 15px;
+}
+
+.focus {
+  background: #118eea;
+  color: #fff;
+  border: 1px solid #118eea;
+}
+
+.focusAlready {
+  color: #898989;
+  background: #dadada;
+}
+
+.answer {
+  color: #118eea;
+  background: #fff;
+  border: 1px solid #118eea;
+}
+
+.tip {
+  font-size: 20px;
+  color: #898989;
+  padding-top: 15px;
+}
+
+.tip span {
+  margin: 0 15px;
+}

@@ -2,6 +2,13 @@ body p {
   margin: 0;
 }
 
+button {
+  font-size: 24px;
+  padding: 4px 22px;
+  border-radius: 25px;
+  border: 0;
+}
+
 /* textarea组件字号修改 */
 :global(.am-textarea-control textarea) {
   font-size: 28px !important;
