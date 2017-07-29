@@ -1,0 +1,37 @@
+.wrapper {
+  padding: 20px;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.title {
+  font-size: 26px;
+  line-height: 32px;
+  margin-bottom: 15px;
+}
+
+.content {
+  font-size: 22px;
+  line-height: 28px;
+  margin-bottom: 15px;
+}
+
+.comment, .date {
+  font-size: 22px;
+  color: #898989;
+  float: left;
+}
+
+.comment span {
+  margin: 0 15px;
+}
+
+.bottom:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.date {
+  float: right;
+}

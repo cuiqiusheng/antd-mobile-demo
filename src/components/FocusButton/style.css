@@ -1,0 +1,29 @@
+.focusBtn {
+  position: relative;
+  font-size: 24px;
+  color: #0f8fea;
+  background: #fff;
+  padding-left: 40px;
+  margin-left: 15px;
+  top: -8px;
+  border: 1px solid #118ee8;
+}
+
+.focusAlready {
+  position: relative;
+  font-size: 24px;
+  background: #dadada;
+  color: #898989;
+  margin-left: 15px;
+  top: -8px;
+}
+
+.focus {
+  position: absolute;
+  left: 15px;
+  top: 6px;
+  width: 22px;
+  height: 22px;
+  background: url('./focus.png') no-repeat;
+  background-size: contain;
+}

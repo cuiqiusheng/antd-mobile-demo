@@ -1,0 +1,16 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+  padding-left: 33px;
+  font-size: 22px;
+}
+
+.icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  background: url('./unlike.png') no-repeat;
+  background-size: contain;
+}

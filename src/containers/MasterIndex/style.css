@@ -1,0 +1,79 @@
+.wrapper {
+  padding-bottom: 30px;
+}
+
+.personInfo {
+  background: #108ee9;
+  color: #fff;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.job {
+  height: 35px;
+  font-size: 28px;
+}
+
+.dsc {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.avatar {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 10px;
+}
+
+.avatar img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #70b8f2;
+}
+
+.opacity {
+  position: relative;
+  top: -50px;
+  padding-top: 50px;
+  background: rgba(0, 0, 0, 0.3);
+  margin-bottom: -50px;
+}
+
+.blank {
+  height: 50px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px 15px 0;
+}
+
+.blank:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.blank div {
+  float: right;
+  margin-left: 35px;
+}
+
+.sex img {
+  width: 35px;
+  height: 35px;
+}
+
+.content {
+  font-size: 22px;
+  padding: 0 15px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.articalImg {
+  height: 200px;
+  background: #efefef;
+}
+
+.askBtnBox {
+  margin: 80px 25px 0;
+}

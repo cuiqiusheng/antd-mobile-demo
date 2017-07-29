@@ -20,7 +20,8 @@ class Guide extends Component {
         <Link to="hotTopic">5、热门话题</Link><br />
         <Link to="topicDetails">6、话题详情</Link><br />
         <Link to="masterList">7、答主列表</Link><br />
-        <Link to="rewardQuestion">8、悬赏问题</Link><br />
+        <Link to="masterIndex">8、答主主页</Link><br />
+        <Link to="rewardQuestion">9、悬赏问题</Link><br />
       </div>
     );
   }
