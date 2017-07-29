@@ -1,0 +1,38 @@
+.imgbox{
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    overflow: hidden;
+    display:inline-block;
+}
+.imgbox img{
+     width: 95px; 
+     height: 95px;
+}
+.introduction{
+    font-size: 22px;
+    color:#888;
+}
+.intcon{
+    color: #888;
+    font-size: 0.3rem;
+    line-height: 1.5;
+    margin-top: 0.12rem;
+    width: auto;
+    white-space: normal;
+    position:relative;
+    padding-bottom:28px;
+}
+.extra{
+    position: absolute;
+    right:0px;
+    bottom:0px;
+    font-size:28px;
+}
+.blue{
+    color:#108ee9;
+}
+.bluebtn{
+    color:#108ee9;
+    font-size:22px;
+}
