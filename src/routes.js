@@ -20,7 +20,7 @@ import PersonalInfo from './containers/PersonalInfo'    // 个人信息
 import ActivityApply from './containers/ActivityApply'  // 活动报名
 import LessonDetail from './containers/LessonDetail'    // 课程详情
 import MyWallet from './containers/MyWallet'            // 我的钱包
-
+import TakeMoney from './containers/TakeMoney'          // 提现未绑定
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={Guide} />
@@ -38,5 +38,6 @@ export default (
     <Route path="activityApply" component={ActivityApply} />
     <Route path="lessonDetail" component={LessonDetail} />
     <Route path="MyWallet" component={MyWallet} />
+    <Route path="TakeMoney" component={TakeMoney} />
   </Route>
 );
