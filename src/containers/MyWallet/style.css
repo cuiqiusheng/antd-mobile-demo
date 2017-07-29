@@ -1,0 +1,56 @@
+.available{
+    height: 364px;
+    background:#108ee9;
+    padding:0 23px;
+}
+.availcon{
+    height: 143px;
+    border-bottom:1px solid #3fa5ed;
+    padding:40px 0;
+    text-align: center;
+}
+.availcon .info{
+    font-size: 24px;
+    color:#fff;
+    line-height: 50px;
+}
+.availcon .cash{
+    font-size: 55px;
+    line-height: 75px;
+    color:#fff;
+}
+.walletbottom{
+    height: 100px;
+    padding:20px;
+    display: flex;
+
+}
+.leftcon,.rightcon{
+    flex-grow: 1;
+    text-align: center;
+}
+.leftcon{
+    border-right:1px solid #3fa5ed;
+}
+.info{
+    font-size: 20px;
+    color:#fff;
+    line-height: 35px;
+}
+.cash{
+    font-size: 35px;
+    line-height: 45px;
+    color:#fff;
+}
+.btnbar{
+    height: 78px;
+    border-bottom:1px solid #e5e4ea;
+    display: flex;
+    text-align: center;
+    background: #fff;
+}
+.save,.take{
+    flex: 1;
+    line-height: 78px;
+    font-size: 26px;
+}
