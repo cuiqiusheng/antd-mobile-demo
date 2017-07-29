@@ -18,6 +18,7 @@ import MasterIndex from './containers/MasterIndex';     // 答主主页
 import PersonIndex from './containers/PersonIndex';     // 个人主页
 import PersonalInfo from './containers/PersonalInfo'    // 个人信息
 import ActivityApply from './containers/ActivityApply'  // 活动报名
+import LessonDetail from './containers/LessonDetail'    // 课程详情
 
 export default (
   <Route path="/" component={App}>
@@ -34,5 +35,6 @@ export default (
     <Route path="PersonalInfo" component={PersonalInfo} />
     <Route path="personIndex" component={PersonIndex} />
     <Route path="activityApply" component={ActivityApply} />
+    <Route path="lessonDetail" component={LessonDetail} />
   </Route>
 );

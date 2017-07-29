@@ -25,6 +25,7 @@ class Guide extends Component {
         <Link to="personIndex">10、个人主页</Link><br />
         <Link to="PersonalInfo">11、个人信息</Link><br />
         <Link to="activityApply">14、活动报名</Link><br />
+        <Link to="lessonDetail">15、课程详情</Link><br />
       </div>
     );
   }

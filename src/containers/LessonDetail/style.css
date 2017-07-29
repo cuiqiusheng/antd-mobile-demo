@@ -1,0 +1,126 @@
+.wrapper {
+  position: relative;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.banner p {
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
+  color: #fff;
+}
+
+.btnBox {
+  text-align: right;
+}
+
+.info {
+  height: 60px;
+  padding: 20px;
+  background: #f6f5fa;
+  font-size: 20px;
+}
+
+.infoLeft {
+  color: #bbb;
+}
+
+.info:after, .liveAddr:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.info > div{
+  float: left;
+}
+
+.info > div:nth-child(1) {
+  width: 80%;
+}
+
+.info > div:nth-child(2) {
+  width: 20%;
+}
+
+.info img {
+  margin-right: 10px;
+}
+
+.local {
+  margin-right: 30px;
+}
+
+.infoBottom {
+  margin-top: 12px;
+}
+
+.infoBottom span {
+  color: #ccc;
+  margin: 0 15px;
+}
+
+.contentBox {
+  height: 700px;
+  background: #fff;
+  padding: 15px;
+  font-size: 24px;
+}
+
+.liveAddr {
+  margin-bottom: 15px;
+}
+
+.liveAddr > div {
+  float: left;
+}
+
+.liveAddr > div:nth-child(1) {
+  width: 120px;
+}
+
+.liveAddr > div:nth-child(2) {
+  width: calc(100% - 120px);
+}
+
+.addr {
+  float: left;
+  width: calc(100% - 120px);
+  color: #333;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+.liveDsc {
+  margin-top: 30px;
+  color: #999;
+  line-height: 34px;
+}
+
+.price {
+  margin-top: 30px;
+  line-height: 36px;
+}
+
+.price span {
+  color: #118eea;
+}
+
+.bottom {
+  position: fixed;
+  left: 0;
+  bottom: 15px;
+  width: calc(100% - 60px);
+  margin: 0 30px;
+}
+
+.applyBtn {
+  font-size: 32px;
+}
