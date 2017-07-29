@@ -22,7 +22,8 @@ class Guide extends Component {
         <Link to="masterList">7、答主列表</Link><br />
         <Link to="masterIndex">8、答主主页</Link><br />
         <Link to="rewardQuestion">9、悬赏问题</Link><br />
-        <Link to="PersonalInfo">10、个人信息</Link><br />
+        <Link to="personIndex">10、个人主页</Link><br />
+        <Link to="PersonalInfo">11、个人信息</Link><br />
       </div>
     );
   }

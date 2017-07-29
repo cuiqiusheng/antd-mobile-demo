@@ -25,9 +25,9 @@ class ArticalPreview extends Component {
         </div>
         <div className={style.bottom}>
           <div className={style.comment}>
-            {this.props.wg} 围观
+            {this.props.wg}
             <span>·</span>
-            {this.props.pl} 评论
+            {this.props.pl}
           </div>
           <div className={style.date}>
             {this.props.date}

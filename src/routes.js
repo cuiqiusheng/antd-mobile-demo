@@ -15,7 +15,7 @@ import TopicDetails from './containers/TopicDetails';   // 话题详情
 import MasterList from './containers/MasterList';       // 答主列表
 import RewardQuestion from './containers/RewardQuestion';  // 悬赏问题
 import MasterIndex from './containers/MasterIndex';     // 答主主页
-
+import PersonIndex from './containers/PersonIndex';     // 个人主页
 import PersonalInfo from './containers/PersonalInfo'    // 个人信息
 export default (
   <Route path="/" component={App}>
@@ -30,5 +30,6 @@ export default (
     <Route path="rewardQuestion" component={RewardQuestion} />
     <Route path="masterIndex" component={MasterIndex} />
     <Route path="PersonalInfo" component={PersonalInfo} />
+    <Route path="personIndex" component={PersonIndex} />
   </Route>
 );
