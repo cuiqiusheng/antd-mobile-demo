@@ -1,5 +1,5 @@
 /**
- * @summary 活动报名
+ * @summary 课程详情
  * @date    2017-07-30
  * @author  cuiqs
  */
