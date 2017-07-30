@@ -4,12 +4,13 @@
  */
 import React from 'react'
 import {createForm} from 'rc-form'
-import {connect} from 'react-redux'
 import style from './style.css'
+
+import {showLoginVisible} from './Action'
+
 import imgPhone from './image/userphone.png'
 import imgPassword from './image/userpassword.png'
 import {Button,NavBar,List,InputItem,Icon,WhiteSpace,Flex,WingBlank,Picker} from 'antd-mobile'
-import {showLoginVisible} from "../../redux/Action";
 
 const district=[
     {

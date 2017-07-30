@@ -3,15 +3,36 @@
  */
 import React, { Component } from 'react';
 import { TabBar, Icon } from 'antd-mobile';
+import {showlogin,checkLoginStatus} from '../../containers/Login/Action'
 
 class NavMenu extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'redTab',
+      selectedTab: 'homeTab',
       hidden: false,
     };
+
+
+    this.loaded = this.loaded.bind(this);
+  }
+
+  loaded(selectedTab){
+      console.log(selectedTab);
+      const {dispatch} = this.props;
+      switch (selectedTab){
+          case 'myTab':
+          {
+              const {login:{isLogin}} = this.props;
+              console.log(isLogin);
+              if(!isLogin)
+              {
+                  dispatch(showlogin());
+              }
+          }
+      }
+
   }
 
   render() {
@@ -28,10 +49,10 @@ class NavMenu extends Component {
             selectedIcon={<Icon type="koubei" size="md" />}
             title="首页"
             key="首页"
-            selected={this.state.selectedTab === 'redTab'}
+            selected={this.state.selectedTab === 'homeTab'}
             onPress={() => {
               this.setState({
-                selectedTab: 'redTab',
+                selectedTab: 'homeTab',
               });
             }}
             data-seed="logId1"
@@ -54,10 +75,10 @@ class NavMenu extends Component {
             }
             title="产品"
             key="产品"
-            selected={this.state.selectedTab === 'greenTab'}
+            selected={this.state.selectedTab === 'proTab'}
             onPress={() => {
               this.setState({
-                selectedTab: 'greenTab',
+                selectedTab: 'proTab',
               });
             }}
           >
@@ -67,11 +88,9 @@ class NavMenu extends Component {
             selectedIcon={{ uri: 'https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg' }}
             title="我的"
             key="我的"
-            selected={this.state.selectedTab === 'yellowTab'}
+            selected={this.state.selectedTab === 'myTab'}
             onPress={() => {
-              this.setState({
-                selectedTab: 'yellowTab',
-              });
+              this.loaded("myTab");
             }}
           >
           </TabBar.Item>

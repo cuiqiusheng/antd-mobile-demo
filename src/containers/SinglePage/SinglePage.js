@@ -3,7 +3,7 @@
  */
 import React, { Component } from 'react';
 import { SearchBar } from 'antd-mobile';
-
+import {connect} from 'react-redux'
 import NavMenu from '../../components/NavMenu';
 import Notice from '../../components/Notice';
 import Flash from '../../components/Flash';
@@ -25,6 +25,7 @@ class SinglePage extends Component {
   }
 
   render() {
+    const {dispatch,login} = this.props;
     return (
       <div className={style.box}>
         <div className={style.scroll}>
@@ -139,10 +140,12 @@ class SinglePage extends Component {
 
         </div>
 
-        <NavMenu />
+        <NavMenu dispatch={dispatch} login={login}/>
       </div>
     );
   }
 }
 
-export default SinglePage;
+export default connect(state=>({
+    login:state.login
+}))(SinglePage);

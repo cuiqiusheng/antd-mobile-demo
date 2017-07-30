@@ -13,6 +13,8 @@ class Guide extends Component {
       <div className={style.wrapper}>
         <div>点击链接跳转到对应页面</div>
         <hr />
+        <Link to="login">登录</Link><br />
+        <Link to="convert">兑换</Link><br />
         <Link to="home">1、首页</Link><br />
         <Link to="ask">2、提问</Link><br />
         <Link to="chooseMaster">3、选择答主</Link><br />

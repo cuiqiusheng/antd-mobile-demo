@@ -5,6 +5,12 @@ import {
 } from 'react-router';
 import App from './App';
 
+
+import Login from './containers/Login';//登陆
+import Convert from './containers/Convert'//兑换
+import InOutHistory from './containers/InOutHistory'//收支记录
+
+
 import Guide from './containers/Guide';                 // 向导页(前期用来跳转展示页面，后期删除)
 import SinglePage from './containers/SinglePage';       // 首页
 import Ask from './containers/Ask';                     // 提问
@@ -27,6 +33,11 @@ import CourseDetailB from './containers/CourseDetailB'    // 课程详情
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={Guide} />
+
+    <Route path="login" component={Login}/>
+    <Route path="convert" component={Convert}/>
+    <Route path="inout" component={InOutHistory}/>
+
     <Route path="home" component={SinglePage} />
     <Route path="ask" component={Ask} />
     <Route path="choosemaster" component={ChooseMaster} />
