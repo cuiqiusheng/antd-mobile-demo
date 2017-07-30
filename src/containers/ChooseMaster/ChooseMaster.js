@@ -1,3 +1,6 @@
+/**
+ * @summary 选择答主
+ */
 import React, { Component } from 'react';
 import style from './style.css';
 import { NavBar, Tabs, WhiteSpace } from 'antd-mobile';

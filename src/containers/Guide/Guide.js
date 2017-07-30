@@ -33,6 +33,7 @@ class Guide extends Component {
         <Link to="recentCourse">16、近期课程</Link><br />
         <Link to="courseDetailB">17、课程详情B</Link><br />
         <Link to="courseDetailC">18、课程详情C</Link><br />
+        <Link to="applyNow">19、立即报名</Link><br />
       </div>
     );
   }

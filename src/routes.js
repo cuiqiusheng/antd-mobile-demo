@@ -22,14 +22,15 @@ import MasterList from './containers/MasterList';       // 答主列表
 import RewardQuestion from './containers/RewardQuestion';  // 悬赏问题
 import MasterIndex from './containers/MasterIndex';     // 答主主页
 import PersonIndex from './containers/PersonIndex';     // 个人主页
-import PersonalInfo from './containers/PersonalInfo'    // 个人信息
-import ActivityApply from './containers/ActivityApply'  // 活动报名
-import CourseDetail from './containers/CourseDetail'    // 课程详情A
-import MyWallet from './containers/MyWallet'            // 我的钱包
-import TakeMoney from './containers/TakeMoney'          // 提现未绑定
-import RecentCourse from './containers/RecentCourse'    // 近期课程
-import CourseDetailB from './containers/CourseDetailB'  // 课程详情B
-import CourseDetailC from './containers/CourseDetailC'  // 课程详情C
+import PersonalInfo from './containers/PersonalInfo';   // 个人信息
+import ActivityApply from './containers/ActivityApply'; // 活动报名
+import CourseDetail from './containers/CourseDetail';   // 课程详情A
+import MyWallet from './containers/MyWallet';           // 我的钱包
+import TakeMoney from './containers/TakeMoney';         // 提现未绑定
+import RecentCourse from './containers/RecentCourse';   // 近期课程
+import CourseDetailB from './containers/CourseDetailB'; // 课程详情B
+import CourseDetailC from './containers/CourseDetailC'; // 课程详情C
+import ApplyNow from './containers/ApplyNow';           // 立即报名
 
 export default (
   <Route path="/" component={App}>
@@ -57,5 +58,6 @@ export default (
     <Route path="recentCourse" component={RecentCourse} />
     <Route path="courseDetailB" component={CourseDetailB} />
     <Route path="courseDetailC" component={CourseDetailC} />
+    <Route path="applyNow" component={ApplyNow} />
   </Route>
 );

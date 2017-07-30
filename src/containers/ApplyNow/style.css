@@ -1,0 +1,47 @@
+.nameBox {
+  padding: 25px 20px;
+  background: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.name {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.balance {
+  font-size: 22px;
+  color: #f5313b;
+}
+
+.tip {
+  font-size: 22px;
+  color: #999;
+  padding: 20px;
+}
+
+.item:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.item > div:nth-child(1) {
+  float: left;
+}
+
+.item > div:nth-child(2) {
+  float: right;
+}
+
+.btnBox {
+  position: fixed;
+  left: 0;
+  bottom: 15px;
+  margin: 0 30px;
+  width: calc(100% - 60px);
+}
+
+.btn {
+  font-size: 32px;
+}
