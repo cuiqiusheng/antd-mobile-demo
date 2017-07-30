@@ -25,7 +25,7 @@ function mapDispatchToProps(dispatch) {
 class Ask extends Component {
   constructor(props) {
     super(props);
-    this.state ={
+    this.state = {
       files: [],
     };
   }
@@ -39,8 +39,8 @@ class Ask extends Component {
     this.setState({
       files,
     });
-	}
-	
+  }
+
 	data = [
 		{
 			label: '张大龙',
@@ -84,7 +84,7 @@ class Ask extends Component {
             })}
             rows={5}
             count={200}
-            placeholder='请详细描述你的问题，如有必要可附带图片以补充说明。详细介绍背景有利于获得全面有效的解答。48小时内无人作答，将退换提问金至你的账户余额。'
+            placeholder="请详细描述你的问题，如有必要可附带图片以补充说明。详细介绍背景有利于获得全面有效的解答。48小时内无人作答，将退换提问金至你的账户余额。"
             className={style.text}
             autoHeight={false}
           />
@@ -151,7 +151,7 @@ class Ask extends Component {
 					<Picker data={this.data} cols={1} {...getFieldProps('asker')} className="forss">
 						<List.Item arrow="horizontal">指定提问人</List.Item>
 					</Picker>
-					
+
 					<List.Item
 						extra={<Switch
 							{...getFieldProps('Switch1', {

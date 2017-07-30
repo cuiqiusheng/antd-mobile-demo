@@ -16,7 +16,7 @@ import FocusButtonB from '../../components/FocusButtonB';
 class ActivityApply extends Component {
   constructor(props) {
     super(props);
-    this.state ={};
+    this.state = {};
   }
 
   render() {
@@ -27,21 +27,21 @@ class ActivityApply extends Component {
           mode="light"
           rightContent={
             <div onClick={() => console.log('分享')}>
-              <img src={share} alt="分享"/>
+              <img src={share} alt="分享" />
             </div>
           }
         >私营三人行系列活动</NavBar>
 
         <div className={style.banner}>
-          <img src={banner} alt="banner"/>
+          <img src={banner} alt="banner" />
           <p>中国职联 私银三人行系列活动-财联邦</p>
         </div>
 
         <div className={style.info}>
           <div>
             <div>
-              <span className={style.local}><img src={local} alt="local"/>深圳罗湖</span>
-              <span><img src={time} alt="local"/>2017-06-07</span>
+              <span className={style.local}><img src={local} alt="local" />深圳罗湖</span>
+              <span><img src={time} alt="local" />2017-06-07</span>
             </div>
             <div className={style.infoBottom}>
               活动名额 40人

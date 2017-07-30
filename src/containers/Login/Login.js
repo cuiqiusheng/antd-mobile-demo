@@ -91,7 +91,8 @@ class Login extends React.Component {
 					<InputItem
 						type="password"
 						labelNumber="5"
-						placeholder="请输入登录密码">
+						placeholder="请输入登录密码"
+					>
 						<img src={imgPassword} alt="password" />
 					</InputItem>
 				</div>

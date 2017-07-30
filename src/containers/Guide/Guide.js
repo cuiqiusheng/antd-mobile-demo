@@ -30,8 +30,9 @@ class Guide extends Component {
         <Link to="TakeMoney">13、未绑定提现</Link><br />
         <Link to="activityApply">14、活动报名</Link><br />
         <Link to="courseDetail">15、课程详情</Link><br />
-        <Link to="recentCourse">15、近期课程</Link><br />
-        <Link to="courseDetailB">16、课程详情B</Link><br />
+        <Link to="recentCourse">16、近期课程</Link><br />
+        <Link to="courseDetailB">17、课程详情B</Link><br />
+        <Link to="courseDetailC">18、课程详情C</Link><br />
       </div>
     );
   }

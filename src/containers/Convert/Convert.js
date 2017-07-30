@@ -1,7 +1,7 @@
-import React from 'react'
-import { NavBar, InputItem, Button, WhiteSpace, WingBlank } from 'antd-mobile'
+import React from 'react';
+import { NavBar, InputItem, Button, WhiteSpace, WingBlank } from 'antd-mobile';
 import { createForm } from 'rc-form';
-import style from './style.css'
+import style from './style.css';
 
 /**
  * 兑换码页
@@ -13,7 +13,8 @@ class Convert extends React.Component {
 		const { getFieldProps } = this.props.form;
 		return (
 			<div className={style.body}>
-				<NavBar iconName="left"
+				<NavBar
+					iconName="left"
 					leftContent="返回"
 					mode="light"
 					className={style.nav}
@@ -23,8 +24,9 @@ class Convert extends React.Component {
 					<div>
 						<InputItem
 							className={style.input}
-							{...getFieldProps('input3') }
-							placeholder="请输入10位兑换码" />
+							{...getFieldProps('input3')}
+							placeholder="请输入10位兑换码"
+						/>
 					</div>
 				</WingBlank>
 				<WhiteSpace size="md" />
@@ -36,4 +38,4 @@ class Convert extends React.Component {
 
 const ConvertWrapper = createForm()(Convert);
 
-export default ConvertWrapper
+export default ConvertWrapper;
