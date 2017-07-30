@@ -1,6 +1,11 @@
+/**
+ * @summary 我的钱包
+ * @date    2017-07-30
+ * @author  white
+ */
 import React, { Component } from 'react';
 import style from './style.css';
-import { NavBar , Icon , WhiteSpace , List} from 'antd-mobile'
+import { NavBar, Icon, WhiteSpace, List} from 'antd-mobile'
 
 const Item = List.Item;
 
@@ -44,12 +49,12 @@ class MyWallet extends Component {
         </div>
         <WhiteSpace size='sm'/>
         <List className="my-list">
-          <Item arrow="horizontal" >收支记录</Item>
-          <Item arrow="horizontal" >兑换码</Item>
+          <Item arrow="horizontal">收支记录</Item>
+          <Item arrow="horizontal">兑换码</Item>
         </List>
         <WhiteSpace size='md' />
         <List className="my-list">
-          <Item arrow="horizontal" >充值提现规则</Item>
+          <Item arrow="horizontal">充值提现规则</Item>
         </List>
       </div>
     );

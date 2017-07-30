@@ -1,7 +1,12 @@
+/**
+ * @summary 提现-未绑定
+ * @date    2017-07-30
+ * @author  white
+ */
 import React, { Component } from 'react';
 import style from './style.css';
-import { NavBar , Icon , WhiteSpace , List ,InputItem ,WingBlank,Button} from 'antd-mobile'
-import zfb from './zfb.png'
+import { NavBar, WhiteSpace, List, WingBlank, Button } from 'antd-mobile';
+import zfb from './zfb.png';
 
 const Item = List.Item;
 

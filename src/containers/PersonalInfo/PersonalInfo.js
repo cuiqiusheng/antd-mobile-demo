@@ -1,6 +1,11 @@
+/**
+ * @summary 个人资料
+ * @date    2017-07-30
+ * @author  white
+ */
 import React, { Component } from 'react';
 import style from './style.css';
-import { NavBar , List , WhiteSpace , WingBlank , Switch , Button } from 'antd-mobile';
+import { NavBar, List, WhiteSpace, WingBlank, Switch, Button } from 'antd-mobile';
 import TopInfo from '../../components/TopInfo'
 import testphotojpg from './testphotojpg.jpg'
 
