@@ -21,6 +21,8 @@ import ActivityApply from './containers/ActivityApply'  // 活动报名
 import LessonDetail from './containers/LessonDetail'    // 课程详情
 import MyWallet from './containers/MyWallet'            // 我的钱包
 import TakeMoney from './containers/TakeMoney'          // 提现未绑定
+import RecentCourse from './containers/RecentCourse'    // 近期课程
+
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={Guide} />
@@ -39,5 +41,6 @@ export default (
     <Route path="lessonDetail" component={LessonDetail} />
     <Route path="MyWallet" component={MyWallet} />
     <Route path="TakeMoney" component={TakeMoney} />
+    <Route path="recentCourse" component={RecentCourse} />
   </Route>
 );

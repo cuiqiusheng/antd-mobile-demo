@@ -1,0 +1,63 @@
+.banner1 img, .banner2 img {
+  width: 100%;
+}
+
+.content {
+  text-align: center;
+  background: #fff;
+  padding-bottom: 30px;
+}
+
+.courseName {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.dsc p {
+  font-size: 22px;
+  color: #999;
+  line-height: 26px;
+}
+
+.guest {
+  font-size: 24px;
+  margin: 20px 0 15px;
+}
+
+.local {
+  font-size: 22px;
+  color: #999;
+}
+
+.local img {
+  margin-right: 10px;
+}
+
+.local span:nth-child(2) {
+  margin-left: 20px;
+}
+
+.apply {
+  margin-top: 30px;
+}
+
+.apply button {
+  background: #118eea;
+  color: #fff;
+  font-size: 22px;
+  border-radius: 8px;
+  padding: 12px 18px;
+}
+
+.apply p {
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.apply span {
+  color: #118eea;
+}
+
+button.applyOver {
+  background: #bbb;
+}
