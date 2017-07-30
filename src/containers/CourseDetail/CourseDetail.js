@@ -13,7 +13,7 @@ import time from './time.jpg';
 import TitleB from '../../components/TitleB';
 import FocusButtonB from '../../components/FocusButtonB';
 
-class LessonDetail extends Component {
+class CourseDetail extends Component {
   constructor(props) {
     super(props);
     this.state ={};
@@ -85,4 +85,4 @@ class LessonDetail extends Component {
   }
 }
 
-export default LessonDetail;
+export default CourseDetail;

@@ -26,7 +26,7 @@ class TakeMoney extends Component {
           提现
         </NavBar>
         <List className="my-list" renderHeader={() => '提现到支付宝账号'}>
-          <Item extra={'立即绑定'}><img src={zfb} /> 尚未绑定支付宝账号</Item>
+          <Item extra={'立即绑定'}><img src={zfb} alt="支付宝" /> 尚未绑定支付宝账号</Item>
         </List>
         <List className="my-list" renderHeader={() => '提现金额'}>
           <Item>

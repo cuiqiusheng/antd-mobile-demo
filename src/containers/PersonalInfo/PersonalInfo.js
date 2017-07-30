@@ -27,7 +27,7 @@ class PersonalInfo extends Component {
         >个人资料设置</NavBar>
         <TopInfo>昵称30天只能修改一次</TopInfo>
         <List className="my-list">
-          <Item arrow="horizontal" extra={<div className={style.imgbox}><img src={testphotojpg} /></div>}>头像</Item>
+          <Item arrow="horizontal" extra={<div className={style.imgbox}><img src={testphotojpg} alt="头像" /></div>}>头像</Item>
           <Item extra={"潘玮柏"}>昵称</Item>
           <Item extra={"15620789924"}>手机号</Item>
           <Item extra={"3/10"} align="bottom">你的头衔<Brief>持牌人</Brief></Item>
