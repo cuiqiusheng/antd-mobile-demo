@@ -3,7 +3,10 @@
  */
 import React, { Component } from 'react';
 import { TabBar, Icon } from 'antd-mobile';
-import {showlogin,checkLoginStatus} from '../../containers/Login/Action'
+import {
+  showlogin,
+  // checkLoginStatus,
+} from '../../containers/Login/Action'
 
 class NavMenu extends Component {
 
@@ -18,20 +21,22 @@ class NavMenu extends Component {
     this.loaded = this.loaded.bind(this);
   }
 
-  loaded(selectedTab){
-      console.log(selectedTab);
-      const {dispatch} = this.props;
-      switch (selectedTab){
-          case 'myTab':
-          {
-              const {login:{isLogin}} = this.props;
-              console.log(isLogin);
-              if(!isLogin)
-              {
-                  dispatch(showlogin());
-              }
+  loaded(selectedTab) {
+    // console.log(selectedTab);
+    const { dispatch } = this.props;
+    switch (selectedTab) {
+      case 'myTab':
+        {
+          const { login: { isLogin } } = this.props;
+          // console.log(isLogin);
+          if (!isLogin) {
+            dispatch(showlogin());
           }
-      }
+        }
+        break;
+      default:
+        return;
+    }
 
   }
 
@@ -63,14 +68,16 @@ class NavMenu extends Component {
               <div style={{
                 width: '0.44rem',
                 height: '0.44rem',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg) center center /  0.42rem 0.42rem no-repeat' }}
+                background: 'url(https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg) center center /  0.42rem 0.42rem no-repeat'
+              }}
               />
             }
             selectedIcon={
               <div style={{
                 width: '0.44rem',
                 height: '0.44rem',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg) center center /  0.42rem 0.42rem no-repeat' }}
+                background: 'url(https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg) center center /  0.42rem 0.42rem no-repeat'
+              }}
               />
             }
             title="产品"
