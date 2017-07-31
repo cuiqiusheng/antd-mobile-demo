@@ -31,6 +31,7 @@ import RecentCourse from './containers/RecentCourse';   // 近期课程
 import CourseDetailB from './containers/CourseDetailB'; // 课程详情B
 import CourseDetailC from './containers/CourseDetailC'; // 课程详情C
 import ApplyNow from './containers/ApplyNow';           // 立即报名
+import AllComment from './containers/AllComment';       // 所有评论  
 
 export default (
   <Route path="/" component={App}>
@@ -59,5 +60,6 @@ export default (
     <Route path="courseDetailB" component={CourseDetailB} />
     <Route path="courseDetailC" component={CourseDetailC} />
     <Route path="applyNow" component={ApplyNow} />
+    <Route path="allComment" component={AllComment} />
   </Route>
 );

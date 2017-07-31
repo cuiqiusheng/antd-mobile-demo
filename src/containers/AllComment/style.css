@@ -1,0 +1,22 @@
+.inputmod{
+    padding:12px 20px;
+    position:fixed;
+    bottom:0;
+    background:#ffffff;
+    border-top:1px solid #bcbcbc;
+    z-index: 100;
+}
+.inp{
+    width: 497px;
+    height: 59px;
+    border:1px solid #888888;
+    border-radius: 6px;
+    background:#f6f5fa;
+    font-size:22px;
+    padding:0 13px;
+}
+.submit{
+    font-size:24px;
+    color:#1296db;
+    margin-left:20px;
+}

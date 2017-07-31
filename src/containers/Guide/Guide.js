@@ -34,6 +34,7 @@ class Guide extends Component {
         <Link to="courseDetailB">17、课程详情B</Link><br />
         <Link to="courseDetailC">18、课程详情C</Link><br />
         <Link to="applyNow">19、立即报名</Link><br />
+        <Link to="allComment">20、所有评论</Link><br />
       </div>
     );
   }
