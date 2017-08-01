@@ -1,0 +1,16 @@
+.imgbox{
+    position:relative;
+}
+.imgbox img{
+    width: 100%;
+}
+.pictext{
+    background:rgba(0, 0, 0, .6);
+    position:absolute;
+    color:#fff;
+    left:0;
+    bottom:0;
+    width: 100%;
+    font-size:24px;
+    padding:14px 0 14px 27px;
+}
