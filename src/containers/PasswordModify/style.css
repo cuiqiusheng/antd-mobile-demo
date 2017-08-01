@@ -1,0 +1,42 @@
+.wrapper {
+  height: 100%;
+  background: #fff;
+}
+
+.content {
+  border-top: 1px solid #ccc;
+  padding-top: 50px;
+}
+
+.content input {
+  font-size: 28px !important;
+}
+
+.picker {
+  color: #118ee8;
+  height: 88px;
+  line-height: 88px;
+  padding: 0 30px;
+  font-size: 28px;
+}
+
+.btnBox {
+  margin-top: 15px;
+  padding: 0 30px;
+  font-size: 32px;
+}
+
+.yzmBox {
+  position: relative;
+}
+
+.yzm {
+  position: absolute;
+  right: 40px;
+  bottom: 18px;
+  font-size: 22px;
+  color: #118ee8;
+  padding: 1px 3px;
+  border: 1px solid #118ee8;
+  border-radius: 5px;
+}
