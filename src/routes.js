@@ -34,6 +34,7 @@ import ApplyNow from './containers/ApplyNow';           // 立即报名
 import AllComment from './containers/AllComment';       // 所有评论
 import PasswordModify from './containers/PasswordModify';  // 修改密码  
 import ColumnList from './containers/ColumnList';       // 专栏列表
+import ArticalPay from './containers/ArticalPay';       // 专栏文章-付费
 
 export default (
   <Route path="/" component={App}>
@@ -65,5 +66,6 @@ export default (
     <Route path="allComment" component={AllComment} />
     <Route path="passwordModify" component={PasswordModify} />
     <Route path="columnList" component={ColumnList} />
+    <Route path="articalPay" component={ArticalPay} />
   </Route>
 );
