@@ -1,0 +1,31 @@
+.wrapper {
+  background: #fff;
+  border-top: 1px solid #e0dfe4;
+  border-bottom: 1px solid #e0dfe4;
+  padding: 30px 15px 25px;
+}
+.pic{
+  width: 192px;
+  height: 128px;
+}
+.wrapper .flexitem{
+  flex:2;
+}
+.tit{
+  font-size:26px;
+  line-height: 30px;
+  font-weight: normal;
+  padding:0;
+  margin:0;
+}
+.box{
+  height: 130px;
+  position:relative;
+}
+.time{
+  position:absolute;
+  right:0;
+  bottom:0;
+  font-size:22px;
+  color:#888;
+}

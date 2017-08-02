@@ -7,6 +7,7 @@ import React, { Component } from 'react';
 import style from './style.css';
 import { NavBar } from 'antd-mobile';
 import titpic from './titpic.png';
+import Item from './components/Item';
 
 class ColumnList extends Component {
   constructor(props) {
@@ -25,6 +26,11 @@ class ColumnList extends Component {
           <img src={titpic}/>
           <p className={style.pictext}>唐宁：独立理财师时代远未到来</p>
         </div>
+        <Item></Item>
+        <Item></Item>
+        <Item></Item>
+        <Item></Item>
+        <Item></Item>
       </div>
     );
   }
