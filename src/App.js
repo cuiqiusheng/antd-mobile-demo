@@ -43,6 +43,7 @@ class App extends Component {
 
 	componentDidMount() {
 		//启动时读取用户数据
+		localStorage.clear();
 		const { dispatch } = this.props;
 		dispatch(checkLoginStatus());
 		document.addEventListener("plusready", this.onPlusReady, false);
@@ -51,8 +52,6 @@ class App extends Component {
 	}
 
 	componentWillReceiveProps(nextProps) {
-		// console.log("收到状态变化信息" + nextProps);
-		// console.log("此时的visible=" + nextProps.login.visible);
 		if (nextProps.login.visible) {
 			Popup.show(<div style={{ height: (document.documentElement.clientHeight) }}>
 				<Login dispatch={nextProps.dispatch} />

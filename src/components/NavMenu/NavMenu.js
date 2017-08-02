@@ -22,13 +22,11 @@ class NavMenu extends Component {
   }
 
   loaded(selectedTab) {
-    // console.log(selectedTab);
     const { dispatch } = this.props;
     switch (selectedTab) {
       case 'myTab':
         {
           const { login: { isLogin } } = this.props;
-          // console.log(isLogin);
           if (!isLogin) {
             dispatch(showlogin());
           }
