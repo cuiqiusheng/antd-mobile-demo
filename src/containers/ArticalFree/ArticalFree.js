@@ -5,7 +5,7 @@
  */
 import React, { Component } from 'react';
 import style from './style.css';
-import { NavBar, Button } from 'antd-mobile';
+import { NavBar } from 'antd-mobile';
 import banner from './titpic.png';
 import like from './like.jpg';
 import comment from './comment.jpg';
@@ -69,7 +69,7 @@ class ArticalFree extends Component {
             穆勒在5月份被司法部委任为特别检察官，负责调查在大选中特朗普和俄罗斯之间的可能存在的串通以及其他事务。美国国会委员会也同样在调查这些事务。
           </p>
         </div>
-        
+
         <div className={style.footer}>
           <div onClick={this.onLike}>
             <img src={like} alt="like" />
